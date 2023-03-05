@@ -12,11 +12,11 @@ struct AddLinkView: View {
     
     @EnvironmentObject var contentViewModel: ContentViewModel
     @ObservedResults(LinkItem.self) var linkItems
-    
     @State var linkTitle = ""
     @State var linkUrl = ""
     
     var body: some View {
+        
         VStack{
             VStack(spacing: 40){
                 HStack{
@@ -39,6 +39,7 @@ struct AddLinkView: View {
                 }
             }
             Spacer()
+            
             Button {
                 let linkItem = LinkItem()
                 linkItem.title = linkTitle

@@ -15,6 +15,7 @@ struct ContentView: View {
     @State var data = []
     
     var body: some View {
+        
         ZStack{
             NavigationView {
                 List {
@@ -42,6 +43,7 @@ struct ContentView: View {
     
     @ViewBuilder
     func addButton() -> some View {
+        
         Button {
             contentViewModel.addViewIsOpen = true
         } label: {
@@ -53,7 +55,6 @@ struct ContentView: View {
                     .foregroundColor(.white)
             }
         }
-        
     }
     
     struct ContentView_Previews: PreviewProvider {
